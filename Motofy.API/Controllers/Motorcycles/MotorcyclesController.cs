@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Motofy.API.Controllers
+namespace Motofy.API.Controllers.Motorcycles
 {
     [ApiController]
     [Route("api/motorcycles")]
