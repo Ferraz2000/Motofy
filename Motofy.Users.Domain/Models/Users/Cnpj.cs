@@ -1,5 +1,4 @@
-﻿
-namespace Motofy.Users.Domain.Models
+﻿namespace Motofy.Users.Domain.Models.User
 {
     public record Cnpj
     {
@@ -7,7 +6,7 @@ namespace Motofy.Users.Domain.Models
 
         private Cnpj()
         {
-           
+
         }
 
         public static Cnpj Create(string cnpj)
@@ -40,8 +39,8 @@ namespace Motofy.Users.Domain.Models
                 sum2 += int.Parse(cnpj[i].ToString()) * multiplier2[i];
             }
 
-            int digit1 = (sum1 % 11) < 2 ? 0 : 11 - (sum1 % 11);
-            int digit2 = (sum2 % 11) < 2 ? 0 : 11 - (sum2 % 11);
+            int digit1 = sum1 % 11 < 2 ? 0 : 11 - sum1 % 11;
+            int digit2 = sum2 % 11 < 2 ? 0 : 11 - sum2 % 11;
 
             return digit1 == int.Parse(cnpj[12].ToString()) && digit2 == int.Parse(cnpj[13].ToString());
         }

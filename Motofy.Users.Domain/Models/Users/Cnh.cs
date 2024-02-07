@@ -1,7 +1,7 @@
 ﻿using Motofy.Common.Models;
 using Motofy.Users.Domain.Enums;
 
-namespace Motofy.Users.Domain.Models
+namespace Motofy.Users.Domain.Models.User
 {
     public class Cnh : Entity
     {

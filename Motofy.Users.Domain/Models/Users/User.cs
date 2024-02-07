@@ -1,7 +1,7 @@
 ﻿using Motofy.Common.Models;
 using Motofy.Users.Domain.Enums;
 
-namespace Motofy.Users.Domain.Models
+namespace Motofy.Users.Domain.Models.User
 {
     public class User : Entity
     {
@@ -19,10 +19,9 @@ namespace Motofy.Users.Domain.Models
             Email = email;
         }
 
-        public User(Guid id, Email email, Name name, Cnpj cnpj, BirthDate birthDate) : base(id)
+        public User(Guid id, Email email, Name name, BirthDate birthDate) : base(id)
         {
             Name = name;
-            Cnpj = cnpj;
             BirthDate = birthDate;
             Email = email;
         }
@@ -36,9 +35,9 @@ namespace Motofy.Users.Domain.Models
         //TODO: soft delete
 
 
-        public static User CreateUser(Email email, Name name, Cnpj cnpj, BirthDate birthDate)
+        public static User CreateUser(Email email, Name name, BirthDate birthDate)
         {
-            var user = new User(id: Guid.NewGuid(), email: email, name: name, cnpj: cnpj, birthDate: birthDate);
+            var user = new User(id: Guid.NewGuid(), email: email, name: name, birthDate: birthDate);
 
             return user;
         }

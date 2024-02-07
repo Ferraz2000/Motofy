@@ -1,4 +1,4 @@
-﻿namespace Motofy.Users.Domain.Models
+﻿namespace Motofy.Users.Domain.Models.User
 {
     public record BirthDate
     {
@@ -6,6 +6,7 @@
         {
 
         }
+       
 
         public DateOnly Date { get; init; }
 

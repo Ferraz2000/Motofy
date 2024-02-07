@@ -7,16 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Models\Abstractions\NewFile1.txt" />
-    <None Remove="Models\NewFile1.txt" />
+    <None Remove="Abstractions\Messaging\ICommand" />
+    <None Remove="Abstractions\Messaging\NewFile1.txt" />
+    <None Remove="CreateUser\NewFile1.txt" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="12.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Motofy.Common\Motofy.Common.csproj" />
+    <ProjectReference Include="..\Motofy.Users.Domain\Motofy.Users.Domain.csproj" />
   </ItemGroup>
 
 </Project>
